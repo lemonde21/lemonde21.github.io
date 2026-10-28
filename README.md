@@ -7,3 +7,5 @@ Plain HTML, CSS and a little JavaScript: no build step. Edit `index.html`, push 
 - `index.html`: content
 - `style.css`: the dark Aero theme (glass windows, glossy controls, dusk backdrop)
 - `script.js`: syntax colouring for the code excerpts, tabs, the Settings/terminal preview, and the taskbar clock
+
+UI inspired by the work of [@aidaknx](https://x.com/aidaknx) on X.
