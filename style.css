@@ -968,6 +968,12 @@ body.home {
     0 0 40px rgba(120, 160, 255, .25),
     0 20px 40px -10px rgba(0, 0, 0, .9);
 }
+.repo-art {
+  position: relative; z-index: 1;
+  width: 132px; height: 132px; border-radius: 30px;
+  border: 1px solid #000;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2), 0 0 40px rgba(255, 106, 61, .3), 0 20px 40px -10px rgba(0, 0, 0, .9);
+}
 .gh-orb svg { width: 58px; height: 58px; fill: #f3eee9; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .6)); }
 
 /* Pill dots: 24px tap targets around a small glossy pill */
@@ -997,6 +1003,87 @@ body.home {
 }
 
 /* ------------------------------------------------------------------ */
+/* Sileo repo page and package depictions                              */
+/* ------------------------------------------------------------------ */
+
+body.repo-page { padding-bottom: 40px; }
+.repo-main { width: min(860px, 100% - 32px); }
+.repo-section { padding-top: 48px; }
+
+.repo-head { display: flex; align-items: center; gap: 20px; margin-bottom: 26px; }
+.repo-head__icon {
+  flex: none;
+  width: 88px; height: 88px; border-radius: 20px;
+  border: 1px solid #000;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2), 0 10px 24px -8px rgba(0, 0, 0, .9);
+}
+.repo-head__title {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 44px); font-weight: 300; line-height: 1.1; letter-spacing: -.01em;
+  background: linear-gradient(180deg, #ffffff 0%, #e7e2dd 50%, #a59d96 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.repo-head__sub { margin: 4px 0 0; color: var(--ink-soft); }
+
+/* Inset URL field with a glossy button fused to its right edge */
+.source-field { display: flex; }
+.source-field__input {
+  flex: 1; min-width: 0;
+  height: 46px; padding: 0 14px;
+  font: 500 15px/1 var(--mono); color: var(--amber);
+  background: linear-gradient(180deg, #070606, #1a1817);
+  border: 1px solid #000; border-right: 0; border-radius: 6px 0 0 6px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, .8), 0 1px 0 rgba(255, 255, 255, .06);
+  outline-offset: -2px;
+}
+.source-field__copy { min-height: 46px; border-radius: 0 6px 6px 0; }
+.repo-manual { margin-top: 18px; }
+
+.pkgs { list-style: none; margin: 0; padding: 8px; }
+.pkgs__empty { padding: 22px 18px; color: var(--muted); }
+.pkg {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 18px;
+  padding: 16px;
+  border-radius: 6px;
+}
+.pkg + .pkg { border-top: 1px solid var(--line); }
+.pkg:hover { background: rgba(255, 255, 255, .03); }
+.pkg__icon {
+  width: 64px; height: 64px; border-radius: 15px;
+  border: 1px solid #000;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2), 0 6px 14px -6px rgba(0, 0, 0, .9);
+}
+.pkg__top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+.pkg__name { margin: 0; font-size: 19px; font-weight: 600; color: #fff; }
+.pkg__ver {
+  padding: 1px 8px; border-radius: 3px;
+  font: 500 12px/1.5 var(--mono); color: #fff;
+  background: linear-gradient(180deg, #ff8a5c, #c8461a);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35);
+}
+.pkg__desc { margin: 4px 0 2px; color: var(--ink-soft); }
+.pkg__meta { margin: 0; font-size: 13px; color: var(--muted); }
+.pkg__actions { display: flex; gap: 8px; }
+
+/* Web depiction (shown by Zebra and in browsers) */
+.depiction-main { width: min(720px, 100% - 32px); padding-top: 32px; }
+.depiction__banner {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: cover;
+  border-bottom: 1px solid #000;
+}
+.depiction__head { display: flex; align-items: center; gap: 18px; margin: -44px 0 18px; position: relative; }
+.depiction__head .repo-head__icon { width: 96px; height: 96px; border-radius: 22px; }
+.depiction__head h1 { margin: 34px 0 0; font-size: 30px; font-weight: 500; color: #fff; }
+.depiction__head p { margin: 0; color: var(--ink-soft); }
+.depiction__features { margin: 0 0 22px; padding-left: 20px; color: var(--ink-soft); }
+.depiction__features li + li { margin-top: 6px; }
+.depiction h2 {
+  margin: 26px 0 10px;
+  font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ------------------------------------------------------------------ */
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -1019,6 +1106,13 @@ body.home {
 @media (max-width: 600px) {
   :root { --menubar-h: 52px; }
   .home__main { gap: 36px; padding: 32px 0 28px; }
+  .repo-section { padding-top: 32px; }
+  .repo-head { gap: 14px; }
+  .repo-head__icon { width: 64px; height: 64px; border-radius: 15px; }
+  .pkg { grid-template-columns: 52px minmax(0, 1fr); gap: 12px 14px; padding: 14px 8px; }
+  .pkg__icon { width: 52px; height: 52px; border-radius: 12px; }
+  .pkg__actions { grid-column: 1 / -1; }
+  .pkg__actions .btn { flex: 1 1 auto; }
   .bio__body { padding: 26px 18px 28px; }
   .bio__text { font-size: 16px; }
   body { font-size: 15px; }

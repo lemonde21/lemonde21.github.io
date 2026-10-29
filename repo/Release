@@ -1,0 +1,19 @@
+Origin: lemonde21
+Label: lemonde21
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: Rootless tweaks for iOS 15 by lemonde21
+Date: Thu, 29 Oct 2026 13:41:56 UTC
+MD5Sum:
+ b9b427f66245cb357f0b5387cf5598f7 908 Packages
+ b880c39f6455fc5d252dd4b37d13a86c 483 Packages.gz
+ 70f31818c98d5109f7863f5fdff20262 547 Packages.bz2
+ 65c2052e846b687cf8ae00bacb5b67ff 568 Packages.xz
+SHA256:
+ 64f680fb8887884ee1498b86a26cd180a4205c67b68270ff11c0f8338fac04fe 908 Packages
+ fbd3850e66fee4d1432a5d59c8dc1bb6057d6caa67ced27c10b48be6085d02e9 483 Packages.gz
+ 6108e0134df609a626de47f1ae1b6bf6944a684f2d4c89a88b603463a7c3e4c4 547 Packages.bz2
+ 365586d83d454fe3afbd5e8deaf4b00ab4489041aa053c6ee359b9792a07541b 568 Packages.xz

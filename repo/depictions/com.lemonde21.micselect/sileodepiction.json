@@ -1,0 +1,61 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "headerImage": "https://lemonde21.github.io/repo/assets/banner.png",
+  "tintColor": "#ff6a3d",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Choose which microphone your apps use.",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Plug wired earphones into an iPad and iOS moves every app to the earphone mic. MicSelect keeps the iPad's **built-in microphone** (or forces the **headset mic**) in Discord and any other app that records audio, while sound still plays through your earphones.",
+          "useSpacing": true
+        },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionHeaderView", "title": "Features" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Default**, **Built-in** or **Headset**: pick your microphone in Settings.\n- Works in every app that uses the standard iOS audio system: Discord, Telegram, voice recorders, browsers.\n- Switch mid-call, no app restart needed.\n- **Listen to microphone** monitor with a level meter to check which mic is active.\n- **Check connected microphones** lists what iOS currently exposes.\n- Command line: `micsel builtin`, `micsel headset`, `micsel default`.\n- Remembers your choice across resprings and reboots.",
+          "useSpacing": true
+        },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionHeaderView", "title": "Limitations" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Works only if iOS still offers the internal mic while earphones are connected.\n- Phone/FaceTime calls, Siri and dictation use separate audio paths and aren't affected.\n- Aimed at wired earphones; Bluetooth headsets behave differently.",
+          "useSpacing": true
+        },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionHeaderView", "title": "Information" },
+        { "class": "DepictionTableTextView", "title": "Developer", "text": "lemonde21" },
+        { "class": "DepictionTableTextView", "title": "Version", "text": "0.3.0" },
+        { "class": "DepictionTableTextView", "title": "Compatibility", "text": "iOS 15.0 – 15.8.x" },
+        { "class": "DepictionTableTextView", "title": "Jailbreak", "text": "Rootless (Dopamine)" },
+        { "class": "DepictionTableTextView", "title": "License", "text": "MIT" },
+        { "class": "DepictionTableButtonView", "title": "Source code", "action": "https://github.com/lemonde21/MicSelect", "openExternal": true },
+        { "class": "DepictionTableButtonView", "title": "Report a bug", "action": "https://github.com/lemonde21/MicSelect/issues/new", "openExternal": true },
+        { "class": "DepictionTableButtonView", "title": "More from lemonde21", "action": "https://lemonde21.github.io/", "openExternal": true }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        { "class": "DepictionSubheaderView", "title": "Version 0.3.0", "useBoldText": true, "useBottomMargin": false },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "First public release.",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

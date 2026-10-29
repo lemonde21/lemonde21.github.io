@@ -1,0 +1,13 @@
+{
+  "class": "FeaturedBannersView",
+  "itemSize": "{263, 148}",
+  "itemCornerRadius": 10,
+  "banners": [
+    {
+      "url": "https://lemonde21.github.io/repo/assets/banner.png",
+      "title": "MicSelect",
+      "package": "com.lemonde21.micselect",
+      "hideShadow": false
+    }
+  ]
+}

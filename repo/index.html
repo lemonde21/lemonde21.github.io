@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>lemonde21 Repo</title>
+  <meta name="description" content="lemonde21's Sileo repo: rootless tweaks for iOS 15 (Dopamine). Add https://lemonde21.github.io/repo/ to Sileo or Zebra.">
+  <meta name="theme-color" content="#0b0a0a">
+  <meta property="og:title" content="lemonde21 Repo">
+  <meta property="og:description" content="Rootless tweaks for iOS 15 (Dopamine). Add it to Sileo or Zebra.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lemonde21.github.io/repo/">
+  <meta property="og:image" content="https://lemonde21.github.io/repo/CydiaIcon.png">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="CydiaIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="repo-page">
+  <!-- Backdrop: dusk sky, ember horizon, mountain ridges, bronze light streaks, lattice -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="streak streak--a"></div>
+    <div class="streak streak--b"></div>
+    <svg class="ridges" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="ridgeFar" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3a2629"/>
+          <stop offset="1" stop-color="#140d0f"/>
+        </linearGradient>
+        <linearGradient id="ridgeNear" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#15100f"/>
+          <stop offset="1" stop-color="#060505"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#ridgeFar)" stroke="rgba(255,150,100,.22)" stroke-width="1.2"
+            d="M0 262 L80 222 L150 240 L240 172 L310 205 L380 152 L450 192 L520 162 L600 212 L690 140 L760 176 L840 120 L910 170 L1000 150 L1080 200 L1160 160 L1250 210 L1340 178 L1440 220 V400 H0Z"/>
+      <path fill="url(#ridgeNear)"
+            d="M0 332 L100 292 L180 312 L260 272 L360 302 L440 256 L520 292 L620 280 L720 312 L820 270 L900 302 L1000 262 L1100 296 L1200 276 L1300 306 L1440 282 V400 H0Z"/>
+    </svg>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="menubar">
+    <a class="menubar__brand" href="../" aria-label="lemonde21, home">
+      <span class="orb orb--sm" aria-hidden="true">l</span>
+      lemonde21
+    </a>
+    <span class="menubar__sep" aria-hidden="true"></span>
+    <nav class="menubar__nav" aria-label="Sections">
+      <a href="#add" data-nav>Add source</a>
+      <a href="#packages" data-nav>Packages</a>
+    </nav>
+  </header>
+
+  <main id="main" class="repo-main">
+
+    <!-- Add source -->
+    <section id="add" class="repo-section">
+      <article class="win">
+        <div class="win__title">
+          <span>Package repository <span class="win__crumb">/ lemonde21</span></span>
+          <span class="win__close" aria-hidden="true">×</span>
+        </div>
+        <div class="win__body">
+          <div class="repo-head">
+            <img class="repo-head__icon" src="CydiaIcon.png" alt="" width="88" height="88">
+            <div>
+              <h1 class="repo-head__title">lemonde21 Repo</h1>
+              <p class="repo-head__sub">Rootless tweaks for iOS 15 · Dopamine</p>
+            </div>
+          </div>
+
+          <p class="label" id="source-label">Source URL</p>
+          <div class="source-field">
+            <input id="source-url" class="source-field__input" type="text" readonly
+                   value="https://lemonde21.github.io/repo/" aria-labelledby="source-label">
+            <button class="btn source-field__copy" type="button" id="copy-source">Copy</button>
+          </div>
+
+          <div class="row-actions">
+            <a class="btn btn--red" href="sileo://source/https://lemonde21.github.io/repo/">Add to Sileo</a>
+            <a class="btn btn--light" href="zbra://sources/add/https://lemonde21.github.io/repo/">Add to Zebra</a>
+          </div>
+
+          <p class="hint hint--small repo-manual">
+            The buttons open your package manager on a jailbroken device. To add it by hand in Sileo:
+            <strong>Sources</strong> → <strong>Edit</strong> → <strong>+</strong>, then paste the URL above.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Packages: filled in from the repo's own Packages index by repo.js -->
+    <section id="packages" class="repo-section">
+      <p class="eyebrow">Packages</p>
+      <article class="win">
+        <div class="win__title">
+          <span>Packages <span class="win__crumb" id="pkg-count"></span></span>
+          <span class="win__close" aria-hidden="true">×</span>
+        </div>
+        <ul class="pkgs" id="pkgs" aria-live="polite">
+          <li class="pkgs__empty">Loading packages…</li>
+        </ul>
+        <noscript>
+          <p class="pkgs__empty">Turn on JavaScript to see the package list, or read the raw <a href="Packages">Packages</a> index.</p>
+        </noscript>
+      </article>
+    </section>
+
+    <p class="credit">Interface inspired by the work of <a href="https://x.com/aidaknx">@aidaknx</a> on X.</p>
+  </main>
+
+  <script src="repo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Package: com.lemonde21.micselect
+Version: 0.3.0
+Architecture: iphoneos-arm64
+Maintainer: lemonde21
+Installed-Size: 560
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/com.lemonde21.micselect_0.3.0_iphoneos-arm64.deb
+Size: 27958
+MD5sum: 9c742bfccb8e2faafff8ac177bab4491
+SHA1: a4e3b9ee7badceef663dce98ee4c1bd620cfe47f
+SHA256: 85c78196083147ecad48eee783bf25a773f699ff155c1d2129bb69c883f7373b
+Section: Tweaks
+Homepage: https://lemonde21.github.io/micselect/
+Description: Choose which microphone apps use (internal or headset), even with earphones plugged in.
+Author: lemonde21
+Depiction: https://lemonde21.github.io/repo/depictions/com.lemonde21.micselect/
+Header: https://lemonde21.github.io/repo/assets/banner.png
+Icon: https://lemonde21.github.io/repo/assets/micselect-icon.png
+Name: MicSelect
+SileoDepiction: https://lemonde21.github.io/repo/depictions/com.lemonde21.micselect/sileodepiction.json
+

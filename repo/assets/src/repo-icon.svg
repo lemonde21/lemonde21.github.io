@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2422"/><stop offset=".5" stop-color="#141111"/><stop offset="1" stop-color="#060505"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="100%" r="70%">
+      <stop offset="0" stop-color="#ff6a3d" stop-opacity=".55"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb" cx="50%" cy="60%" r="55%">
+      <stop offset="0" stop-color="#ff6a3d"/><stop offset=".55" stop-color="#b8321c"/><stop offset="1" stop-color="#4a120b"/>
+    </radialGradient>
+    <radialGradient id="orbLow" cx="50%" cy="100%" r="60%">
+      <stop offset="0" stop-color="#ffb07a" stop-opacity=".9"/><stop offset="1" stop-color="#ffb07a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gloss" cx="50%" cy="15%" r="50%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+  <circle cx="256" cy="256" r="178" fill="#000" opacity=".5"/>
+  <circle cx="256" cy="256" r="170" fill="url(#orb)"/>
+  <circle cx="256" cy="256" r="170" fill="url(#orbLow)"/>
+  <circle cx="256" cy="256" r="164" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3"/>
+  <text x="256" y="330" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="210" font-weight="700" fill="#fff">l</text>
+  <ellipse cx="256" cy="168" rx="122" ry="72" fill="url(#gloss)"/>
+</svg>

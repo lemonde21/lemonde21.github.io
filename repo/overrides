@@ -1,0 +1,7 @@
+# Extra fields added to packages in the Packages index (format: <package> <field> <value>).
+# Add lines for new packages here, then run ./update.sh.
+com.lemonde21.micselect Icon https://lemonde21.github.io/repo/assets/micselect-icon.png
+com.lemonde21.micselect Header https://lemonde21.github.io/repo/assets/banner.png
+com.lemonde21.micselect Depiction https://lemonde21.github.io/repo/depictions/com.lemonde21.micselect/
+com.lemonde21.micselect SileoDepiction https://lemonde21.github.io/repo/depictions/com.lemonde21.micselect/sileodepiction.json
+com.lemonde21.micselect Homepage https://lemonde21.github.io/micselect/

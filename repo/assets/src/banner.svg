@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="500" viewBox="0 0 1500 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070d"/><stop offset=".35" stop-color="#0d1322"/><stop offset=".62" stop-color="#2a1a24"/><stop offset=".8" stop-color="#5a2a22"/><stop offset="1" stop-color="#1a0f0e"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="25%" cy="85%" r="60%">
+      <stop offset="0" stop-color="#e26e46" stop-opacity=".6"/><stop offset="1" stop-color="#e26e46" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2629"/><stop offset="1" stop-color="#140d0f"/></linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15100f"/><stop offset="1" stop-color="#060505"/></linearGradient>
+  </defs>
+  <rect width="1500" height="500" fill="url(#sky)"/>
+  <rect width="1500" height="500" fill="url(#ember)"/>
+  <path fill="url(#far)" stroke="#ff9664" stroke-opacity=".22" stroke-width="1.5" d="M0 372 L83 330 L156 349 L250 278 L323 313 L396 258 L469 300 L542 268 L625 321 L719 246 L792 283 L875 225 L948 277 L1042 256 L1125 308 L1208 266 L1302 319 L1396 285 L1500 329 V500 H0Z"/>
+  <path fill="url(#near)" d="M0 445 L104 404 L188 425 L271 383 L375 414 L458 367 L542 404 L646 391 L750 425 L854 381 L938 414 L1042 373 L1146 408 L1250 387 L1354 419 L1500 394 V500 H0Z"/>
+</svg>

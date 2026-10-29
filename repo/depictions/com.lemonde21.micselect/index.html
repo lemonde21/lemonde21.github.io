@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MicSelect · lemonde21 Repo</title>
+  <meta name="description" content="MicSelect: choose which microphone your apps use. Rootless tweak for iOS 15 (Dopamine).">
+  <meta name="theme-color" content="#0b0a0a">
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="repo-page">
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <main class="depiction-main depiction">
+    <article class="win">
+      <img class="depiction__banner" src="../../assets/banner.png" alt="" width="1500" height="500">
+      <div class="win__body">
+        <div class="depiction__head">
+          <img class="repo-head__icon" src="../../assets/micselect-icon.png" alt="" width="96" height="96">
+          <div>
+            <h1>MicSelect</h1>
+            <p>lemonde21 · v0.3.0</p>
+          </div>
+        </div>
+
+        <p class="lead">
+          Plug wired earphones into an iPad and iOS moves every app to the earphone mic.
+          MicSelect keeps the iPad's <strong>built-in microphone</strong> (or forces the
+          <strong>headset mic</strong>) in Discord and any other app that records audio,
+          while sound still plays through your earphones.
+        </p>
+
+        <h2>Features</h2>
+        <ul class="depiction__features">
+          <li><strong>Default</strong>, <strong>Built-in</strong> or <strong>Headset</strong>: pick your microphone in Settings.</li>
+          <li>Works in every app that uses the standard iOS audio system: Discord, Telegram, voice recorders, browsers.</li>
+          <li>Switch mid-call, no app restart needed.</li>
+          <li><strong>Listen to microphone</strong> monitor with a level meter to check which mic is active.</li>
+          <li><strong>Check connected microphones</strong> lists what iOS currently exposes.</li>
+          <li>Command line: <code>micsel builtin</code>, <code>micsel headset</code>, <code>micsel default</code>.</li>
+          <li>Remembers your choice across resprings and reboots.</li>
+        </ul>
+
+        <h2>Limitations</h2>
+        <ul class="depiction__features">
+          <li>Works only if iOS still offers the internal mic while earphones are connected.</li>
+          <li>Phone/FaceTime calls, Siri and dictation use separate audio paths and aren't affected.</li>
+          <li>Aimed at wired earphones; Bluetooth headsets behave differently.</li>
+        </ul>
+
+        <h2>Information</h2>
+        <dl class="specs">
+          <div><dt>Compatibility</dt><dd>iOS 15.0 – 15.8.x</dd></div>
+          <div><dt>Jailbreak</dt><dd>Rootless (Dopamine)</dd></div>
+          <div><dt>Needs</dt><dd>ElleKit / Substrate, PreferenceLoader</dd></div>
+          <div><dt>License</dt><dd>MIT</dd></div>
+        </dl>
+
+        <h2>Changelog</h2>
+        <p class="lead"><strong>0.3.0</strong>: first public release.</p>
+
+        <div class="row-actions">
+          <a class="btn btn--light" href="https://github.com/lemonde21/MicSelect">Source code</a>
+          <a class="btn" href="https://github.com/lemonde21/MicSelect/issues/new">Report a bug</a>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8a4c"/><stop offset=".55" stop-color="#f05a28"/><stop offset="1" stop-color="#c8401a"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="mic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f1e6e0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect x="96" y="70" width="80" height="0" fill="none"/>
+  <!-- microphone -->
+  <rect x="206" y="96" width="100" height="196" rx="50" fill="url(#mic)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round">
+    <path d="M158 246 a98 98 0 0 0 196 0"/>
+    <path d="M256 344 v52"/>
+    <path d="M200 408 h112"/>
+  </g>
+  <!-- glass highlight over the top half -->
+  <path d="M0 0 H512 V236 Q256 290 0 236 Z" fill="url(#gloss)"/>
+</svg>
