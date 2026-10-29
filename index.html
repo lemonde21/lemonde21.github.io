@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>lemonde21 · Portfolio</title>
-  <meta name="description" content="Portfolio of lemonde21: iOS jailbreak tweaks, starting with MicSelect, a rootless iOS 15 tweak that lets you choose which microphone apps use.">
+  <meta name="description" content="Portfolio of lemonde21, a developer building iOS jailbreak tweaks that work close to the system.">
   <meta name="theme-color" content="#0b0a0a">
   <meta property="og:title" content="lemonde21 · Portfolio">
-  <meta property="og:description" content="iOS tweaks built close to the system. Featuring MicSelect: choose which microphone your apps use.">
+  <meta property="og:description" content="iOS tweaks built close to the system.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lemonde21.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
   <!-- Backdrop: dusk sky, ember horizon, mountain ridges, bronze light streaks, lattice -->
   <div class="backdrop" aria-hidden="true">
     <div class="streak streak--a"></div>
@@ -39,419 +39,94 @@
     </svg>
   </div>
 
-  <a class="skip" href="#main">Skip to content</a>
+  <main class="home__main">
 
-  <!-- Menu bar -->
-  <header class="menubar">
-    <a class="menubar__brand" href="#home">
-      <span class="orb orb--sm" aria-hidden="true">l</span>
-      lemonde21
-    </a>
-    <span class="menubar__sep" aria-hidden="true"></span>
-    <nav class="menubar__nav" aria-label="Sections">
-      <a href="#home" data-nav>Home</a>
-      <a href="#micselect" data-nav>MicSelect</a>
-      <a href="#toolkit" data-nav>Toolkit</a>
-      <a href="#contact" data-nav>Contact</a>
-    </nav>
-  </header>
-
-  <main id="main">
-
-    <!-- ===================== Home ===================== -->
-    <section id="home" class="hero">
-      <article class="win hero__about">
-        <div class="win__title">
-          <span>About lemonde21</span>
-          <span class="win__close" aria-hidden="true">×</span>
+    <!-- Bio -->
+    <article class="win bio">
+      <div class="win__title">
+        <span>About lemonde21</span>
+        <span class="win__close" aria-hidden="true">×</span>
+      </div>
+      <div class="win__body bio__body">
+        <div class="about__mark">
+          <span class="orb orb--lg" aria-hidden="true">l</span>
+          <h1 class="about__name">lemonde<span>21</span></h1>
         </div>
-        <div class="win__body about">
-          <div class="about__mark">
-            <span class="orb orb--lg" aria-hidden="true">l</span>
-            <h1 class="about__name">lemonde<span>21</span></h1>
-          </div>
-
-          <p class="about__meta">
-            Developer · iOS tweaks<br>
-            Portfolio version 1.0 · github.com/lemonde21
-          </p>
-
-          <p>
-            I build software that works close to the operating system. My current project,
-            <strong>MicSelect</strong>, hooks into iOS's audio stack so you decide which microphone
-            your apps record from: the iPad's own mic or your earphones.
-          </p>
-
-          <p class="about__warn">
-            Notice: plugging in wired earphones no longer takes over your microphone
-            on devices running MicSelect.
-          </p>
-
-          <p class="about__legal">
-            Developed and tested on an iPad mini 4 running iOS 15.8.6 (Dopamine).<br>
-            © 2026 lemonde21. Source code available under the <a href="https://github.com/lemonde21/MicSelect/blob/main/LICENSE">MIT License</a>.<br>
-            Interface inspired by the work of <a href="https://x.com/aidaknx">@aidaknx</a> on X.
-          </p>
-
-          <div class="about__actions">
-            <a class="btn btn--light" href="#micselect">View MicSelect</a>
-            <a class="btn" href="https://github.com/lemonde21">GitHub profile</a>
-          </div>
-        </div>
-      </article>
-
-      <div class="tiles" aria-label="At a glance">
-        <a class="tile tile--sky tile--wide" href="#micselect">
-          <span class="tile__cloud tile__cloud--1" aria-hidden="true"></span>
-          <span class="tile__cloud tile__cloud--2" aria-hidden="true"></span>
-          <span class="tile__kicker">Test device</span>
-          <span class="tile__big">iPad mini 4</span>
-          <span class="tile__foot">iOS 15.8.6 · Dopamine · arm64</span>
-        </a>
-        <a class="tile tile--ember" href="https://github.com/lemonde21/MicSelect/releases/latest">
-          <span class="tile__kicker">Latest release</span>
-          <span class="tile__huge">0.3</span>
-          <span class="tile__foot">MicSelect · Oct 2026</span>
-        </a>
-        <a class="tile tile--teal" href="https://github.com/lemonde21/MicSelect/actions/workflows/build.yml">
-          <span class="tile__kicker">Continuous build</span>
-          <img class="tile__badge" src="https://github.com/lemonde21/MicSelect/actions/workflows/build.yml/badge.svg" alt="MicSelect build status" width="104" height="20">
-          <span class="tile__foot">GitHub Actions · Theos</span>
-        </a>
-        <a class="tile tile--glass tile--wide" href="https://github.com/lemonde21/MicSelect">
-          <span class="tile__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-5a3.5 3.5 0 1 0-7 0v5A3.5 3.5 0 0 0 12 15Zm6-3.5a6 6 0 0 1-12 0H4.5a7.5 7.5 0 0 0 6.75 7.46V21h1.5v-2.04a7.5 7.5 0 0 0 6.75-7.46H18Z"/></svg>
-          </span>
-          <span>
-            <span class="tile__kicker">Open source</span>
-            <span class="tile__mid">lemonde21/MicSelect</span>
-          </span>
+        <p class="bio__role">Developer · iOS tweaks</p>
+        <p class="bio__text">
+          I build software that works close to the operating system: jailbreak tweaks that hook
+          into iOS frameworks to change how the system behaves, built and shipped in the open.
+        </p>
+        <a class="btn" href="https://github.com/lemonde21">
+          <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          github.com/lemonde21
         </a>
       </div>
-    </section>
+    </article>
 
-    <!-- ===================== MicSelect ===================== -->
-    <section id="micselect" class="section">
-      <p class="eyebrow">Featured project</p>
-
-      <article class="win ide">
-        <div class="ide__menu">
-          <span class="ide__app">MicSelect</span>
-          <span class="ide__bar" aria-hidden="true"></span>
-          <a href="https://github.com/lemonde21/MicSelect">Source</a>
-          <a href="https://github.com/lemonde21/MicSelect/releases">Releases</a>
-          <a href="https://github.com/lemonde21/MicSelect/actions">Actions</a>
-          <a href="https://github.com/lemonde21/MicSelect/issues">Issues</a>
-          <a href="https://github.com/lemonde21/MicSelect#readme">Readme</a>
+    <!-- Projects carousel -->
+    <section class="carousel" aria-roledescription="carousel" aria-labelledby="projects-title">
+      <div class="carousel__head">
+        <h2 class="eyebrow" id="projects-title">Projects</h2>
+        <div class="carousel__arrows">
+          <button class="round-btn" type="button" data-dir="-1" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 5.3 8 12l6.7 6.7 1.06-1.06L10.12 12l5.64-5.64z"/></svg>
+          </button>
+          <button class="round-btn" type="button" data-dir="1" aria-label="Next project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.3 5.3 16 12l-6.7 6.7-1.06-1.06L13.88 12 8.24 6.36z"/></svg>
+          </button>
         </div>
+      </div>
 
-        <div class="ide__body">
-          <aside class="ide__side">
-            <div class="ptabs" role="tablist" aria-label="Sidebar">
-              <button class="ptab is-active" role="tab" aria-selected="true" aria-controls="side-project" id="tab-project">Project</button>
-              <button class="ptab" role="tab" aria-selected="false" aria-controls="side-vcs" id="tab-vcs" tabindex="-1">Version Control</button>
-            </div>
-
-            <div class="side-panel" id="side-project" role="tabpanel" aria-labelledby="tab-project">
-              <p class="tree__root">micselect</p>
-              <ul class="tree">
-                <li class="tree__dir">.github/workflows</li>
-                <li><button class="tree__file" data-file="build"><span class="ficon ficon--yml">yml</span>build.yml</button></li>
-                <li class="tree__dir">micselctl</li>
-                <li><button class="tree__file" data-file="cli"><span class="ficon ficon--m">m</span>main.m</button></li>
-                <li class="tree__dir">micselectprefs</li>
-                <li><button class="tree__file" data-file="prefs"><span class="ficon ficon--m">m</span>MSPRootListController.m</button></li>
-                <li><button class="tree__file tree__file--top" data-file="shared"><span class="ficon ficon--h">h</span>Shared.h</button></li>
-                <li><button class="tree__file tree__file--top is-active" data-file="tweak" aria-current="true"><span class="ficon ficon--x">x</span>Tweak.x</button></li>
-                <li><button class="tree__file tree__file--top" data-file="control"><span class="ficon ficon--deb">deb</span>control</button></li>
-              </ul>
-            </div>
-
-            <div class="side-panel" id="side-vcs" role="tabpanel" aria-labelledby="tab-vcs" hidden>
-              <ol class="commits">
-                <li>
-                  <span class="commits__tag">v0.3.0</span>
-                  <span class="commits__msg">Initial commit: MicSelect v0.3.0</span>
-                  <span class="commits__meta">main · Oct 28, 2026 · build passing</span>
-                </li>
-              </ol>
-              <a class="btn btn--sm" href="https://github.com/lemonde21/MicSelect/commits/main">Full history</a>
-            </div>
-          </aside>
-
-          <div class="ide__editor">
-            <div class="etabs">
-              <span class="etab"><span id="etab-name">Tweak.x</span><span class="etab__x" aria-hidden="true">×</span></span>
-            </div>
-
-            <!-- Real excerpts from the MicSelect source. JS shows one at a time and adds syntax colours. -->
-            <div class="code-wrap">
-              <pre class="code is-active" data-file="tweak" data-name="Tweak.x" data-start="90" data-lang="Logos (Objective-C)"
-                   data-desc="AVAudioSession hooks, injected into every app"><code>%hook AVAudioSession
-
-// If the app (or WebRTC inside Discord) picks an input itself, override it.
-- (BOOL)setPreferredInput:(AVAudioSessionPortDescription *)inPort error:(NSError **)outError {
-    if (!sApplying) {
-        AVAudioSessionPortDescription *forced = MSDesiredInput(self);
-        if (forced) inPort = forced;
-    }
-    return %orig(inPort, outError);
-}
-
-- (BOOL)setActive:(BOOL)active withOptions:(AVAudioSessionSetActiveOptions)options error:(NSError **)outError {
-    BOOL ok = %orig;
-    if (ok &amp;&amp; active) MSApply(self);
-    return ok;
-}</code></pre>
-
-              <pre class="code" data-file="shared" data-name="Shared.h" data-start="1" data-lang="C header"
-                   data-desc="Constants shared by the tweak, Settings pane and CLI"><code>// Shared constants for the tweak, the Settings pane and the CLI tool.
-#pragma once
-
-#define kMSDomain     "com.lemonde21.micselect"        // preferences domain
-#define kMSModeKey    "mode"                          // 0 = default, 1 = built-in, 2 = headset
-#define kMSNotifyName "com.lemonde21.micselect.mode"   // notifyd name (state = current mode)</code></pre>
-
-              <pre class="code" data-file="prefs" data-name="MSPRootListController.m" data-start="225" data-lang="Objective-C"
-                   data-desc="Settings pane: live microphone monitor with a level meter"><code>    // Level meter
-    [input installTapOnBus:0 bufferSize:1024 format:format block:^(AVAudioPCMBuffer *buffer, AVAudioTime *when) {
-        float *samples = buffer.floatChannelData ? buffer.floatChannelData[0] : NULL;
-        AVAudioFrameCount count = buffer.frameLength;
-        if (!samples || count == 0) return;
-
-        float sum = 0;
-        for (AVAudioFrameCount i = 0; i &lt; count; i++) sum += samples[i] * samples[i];
-        float db = 20.0f * log10f(fmaxf(sqrtf(sum / count), 1e-6f));
-        float level = fminf(fmaxf((db + 60.0f) / 60.0f, 0.0f), 1.0f); // -60 dB…0 dB → 0…1
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [gLevelCell setLevel:level];
-        });
-    }];</code></pre>
-
-              <pre class="code" data-file="cli" data-name="main.m" data-start="36" data-lang="Objective-C"
-                   data-desc="micsel: switch microphones from the terminal"><code>        int mode = -1;
-        for (int i = 0; i &lt; 3; i++) {
-            if (strcmp(argv[1], kModes[i]) == 0) mode = i;
-        }
-        if (mode &lt; 0) { usage(); return 1; }
-
-        // Live update for running apps; SpringBoard also saves it so the
-        // Settings pane stays in sync and the choice survives a reboot.
-        notify_set_state(token, (uint64_t)mode);
-        notify_post(kMSNotifyName);
-        printf("microphone mode set to: %s\n", kModes[mode]);</code></pre>
-
-              <pre class="code" data-file="build" data-name="build.yml" data-start="34" data-lang="YAML"
-                   data-desc="CI: build the .deb on macOS, publish releases from tags"><code>      - name: Build package
-        run: gmake package FINALPACKAGE=1 TARGET=iphone:clang:16.5:15.0
-
-      - name: Upload .deb as build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: MicSelect-deb
-          path: packages/*.deb
-
-      - name: Publish GitHub release (tags only)
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v2
-        with:
-          files: packages/*.deb
-          generate_release_notes: true</code></pre>
-
-              <pre class="code" data-file="control" data-name="control" data-start="1" data-lang="Debian control"
-                   data-desc="Package metadata for the rootless .deb"><code>Package: com.lemonde21.micselect
-Name: MicSelect
-Version: 0.3.0
-Architecture: iphoneos-arm64
-Description: Choose which microphone apps use (internal or headset), even with earphones plugged in.
-Maintainer: lemonde21
-Author: lemonde21
-Section: Tweaks
-Depends: mobilesubstrate, preferenceloader</code></pre>
-            </div>
-
-            <div class="statusbar">
-              <span id="status-lang">Logos (Objective-C)</span>
-              <span id="status-desc">AVAudioSession hooks, injected into every app</span>
-              <a id="status-link" href="https://github.com/lemonde21/MicSelect/blob/main/Tweak.x">Open on GitHub ↗</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <div class="project-grid">
-        <!-- Description -->
-        <article class="win project-info">
-          <div class="win__title">
-            <span>MicSelect <span class="win__crumb">/ Overview</span></span>
-            <span class="win__close" aria-hidden="true">×</span>
-          </div>
-          <div class="win__body">
-            <h2 class="h2">Choose which microphone your apps use.</h2>
-            <p class="lead">
-              Plug wired earphones into an iPad and iOS moves every app to the earphone mic.
-              MicSelect keeps the iPad's built-in microphone (or forces the headset mic) in Discord
-              and any other app that records audio, while sound still plays through your earphones.
-            </p>
-
-            <ol class="steps">
-              <li>
-                <span class="steps__n">1</span>
-                <div>
-                  <h3>Hook</h3>
-                  <p>Injected into every UIKit app, it hooks <code>AVAudioSession</code> and applies your choice with <code>setPreferredInput:</code> whenever a session activates or the audio route changes.</p>
+      <div class="carousel__track">
+        <!-- To add a project: copy one <article class="slide"> and change its text and link. -->
+        <article class="slide" role="group" aria-roledescription="slide" aria-label="MicSelect">
+          <a class="slide__card" href="micselect/">
+            <div class="slide__art slide__art--mic" aria-hidden="true">
+              <div class="mini-win">
+                <div class="mini-win__title"><span>Settings <i>/ MicSelect</i></span><b></b></div>
+                <div class="mini-win__body">
+                  <div class="mini-seg"><span>Default</span><span class="on">Built-in</span><span>Headset</span></div>
+                  <div class="mini-row"><span>Listen to microphone</span><span class="mini-switch"></span></div>
+                  <div class="mini-meter"><span></span></div>
                 </div>
-              </li>
-              <li>
-                <span class="steps__n">2</span>
-                <div>
-                  <h3>Share</h3>
-                  <p>The mode lives in <code>notifyd</code> state, which sandboxed apps can read, so you can switch microphones mid-call with no restart.</p>
-                </div>
-              </li>
-              <li>
-                <span class="steps__n">3</span>
-                <div>
-                  <h3>Persist</h3>
-                  <p>SpringBoard saves the choice to preferences and restores it at boot, so it survives resprings and reboots.</p>
-                </div>
-              </li>
-            </ol>
-
-            <dl class="specs">
-              <div><dt>iOS</dt><dd>15.0 – 15.8.x</dd></div>
-              <div><dt>Jailbreak</dt><dd>Rootless (Dopamine)</dd></div>
-              <div><dt>Needs</dt><dd>ElleKit / Substrate, PreferenceLoader</dd></div>
-              <div><dt>License</dt><dd>MIT</dd></div>
-            </dl>
-
-            <div class="row-actions">
-              <a class="btn btn--red" href="https://github.com/lemonde21/MicSelect/releases/latest">
-                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.25 3h1.5v10.19l3.72-3.72 1.06 1.06L12 16.06l-5.53-5.53 1.06-1.06 3.72 3.72V3ZM4.5 18.5h15V20h-15z"/></svg>
-                Download .deb
-              </a>
-              <a class="btn" href="https://github.com/lemonde21/MicSelect">View source</a>
+              </div>
             </div>
-          </div>
+            <div class="slide__info">
+              <p class="slide__kicker">iOS tweak · v0.3.0</p>
+              <h3 class="slide__title">MicSelect</h3>
+              <p class="slide__text">Choose which microphone your apps use: keep the iPad's built-in mic in Discord while wired earphones are plugged in.</p>
+              <p class="slide__tags"><span>Objective-C</span><span>Logos</span><span>iOS 15</span><span>Rootless</span></p>
+              <span class="btn btn--light btn--sm">Open project <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
         </article>
 
-        <!-- Settings pane preview -->
-        <article class="win settings" aria-labelledby="settings-title">
-          <div class="win__title">
-            <span id="settings-title">Settings <span class="win__crumb">/ MicSelect</span></span>
-            <span class="win__close" aria-hidden="true">×</span>
-          </div>
-          <div class="win__body">
-            <p class="label">Microphone</p>
-            <div class="seg" role="radiogroup" aria-label="Microphone mode">
-              <button class="seg__btn" role="radio" aria-checked="false" data-mode="default" tabindex="-1">Default</button>
-              <button class="seg__btn is-active" role="radio" aria-checked="true" data-mode="builtin">Built-in</button>
-              <button class="seg__btn" role="radio" aria-checked="false" data-mode="headset" tabindex="-1">Headset</button>
+        <article class="slide" role="group" aria-roledescription="slide" aria-label="More on GitHub">
+          <a class="slide__card" href="https://github.com/lemonde21">
+            <div class="slide__art slide__art--gh" aria-hidden="true">
+              <span class="gh-orb">
+                <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              </span>
             </div>
-            <p class="hint" id="mode-hint">Apps record from the iPad's internal microphone, even with earphones plugged in.</p>
-
-            <div class="setting-row">
-              <span id="listen-label">Listen to microphone</span>
-              <button class="switch" role="switch" aria-checked="false" aria-labelledby="listen-label" id="listen"></button>
+            <div class="slide__info">
+              <p class="slide__kicker">Elsewhere</p>
+              <h3 class="slide__title">More on GitHub</h3>
+              <p class="slide__text">Source code, releases, and whatever I'm building next.</p>
+              <span class="btn btn--sm">github.com/lemonde21 <span aria-hidden="true">↗</span></span>
             </div>
-            <div class="meter" aria-hidden="true"><div class="meter__fill" id="meter"></div></div>
-            <p class="hint hint--small">Interactive preview: the level meter is simulated and this page never uses your microphone.</p>
-          </div>
-        </article>
-
-        <!-- Terminal -->
-        <article class="win terminal" aria-label="micsel terminal preview">
-          <div class="win__title win__title--term">
-            <span>Terminal <span class="win__crumb">/ mobile@ipad</span></span>
-            <span class="win__close" aria-hidden="true">×</span>
-          </div>
-          <div class="terminal__body" aria-live="polite">
-            <p><span class="prompt">$</span> micsel</p>
-            <p class="out">current mode: default</p>
-            <p><span class="prompt">$</span> <span id="term-cmd">micsel builtin</span></p>
-            <p class="out" id="term-out">microphone mode set to: builtin</p>
-            <p><span class="prompt">$</span> <span class="caret" aria-hidden="true"></span></p>
-          </div>
+          </a>
         </article>
       </div>
-    </section>
 
-    <!-- ===================== Toolkit ===================== -->
-    <section id="toolkit" class="section">
-      <p class="eyebrow">Toolkit</p>
-      <article class="win toolkit">
-        <div class="win__title">
-          <span>Toolkit <span class="win__crumb">/ what MicSelect is built with</span></span>
-          <span class="win__close" aria-hidden="true">×</span>
-        </div>
-        <div class="win__body">
-          <div class="seg seg--tabs" role="tablist" aria-label="Toolkit categories">
-            <button class="seg__btn is-active" role="tab" aria-selected="true" aria-controls="tk-lang" id="tkt-lang">Languages</button>
-            <button class="seg__btn" role="tab" aria-selected="false" aria-controls="tk-ios" id="tkt-ios" tabindex="-1">iOS internals</button>
-            <button class="seg__btn" role="tab" aria-selected="false" aria-controls="tk-ship" id="tkt-ship" tabindex="-1">Build &amp; ship</button>
-          </div>
-
-          <ul class="kit" id="tk-lang" role="tabpanel" aria-labelledby="tkt-lang">
-            <li><strong>Objective-C</strong><span>The tweak, the Settings pane and the CLI tool</span></li>
-            <li><strong>Logos</strong><span><code>%hook</code> / <code>%orig</code> syntax for hooking methods at runtime</span></li>
-            <li><strong>C system APIs</strong><span><code>notify.h</code>, CFPreferences, <code>os_log</code></span></li>
-            <li><strong>YAML</strong><span>The GitHub Actions build pipeline</span></li>
-          </ul>
-          <ul class="kit" id="tk-ios" role="tabpanel" aria-labelledby="tkt-ios" hidden>
-            <li><strong>AVAudioSession</strong><span>Audio routes, categories and the preferred input</span></li>
-            <li><strong>AVAudioEngine</strong><span>Live microphone monitor with an input tap for the level meter</span></li>
-            <li><strong>notifyd</strong><span>Shared state that reaches sandboxed apps and updates live</span></li>
-            <li><strong>SpringBoard</strong><span>Saves the mode and restores it at boot</span></li>
-            <li><strong>PreferenceLoader</strong><span>A native-looking pane in the Settings app</span></li>
-          </ul>
-          <ul class="kit" id="tk-ship" role="tabpanel" aria-labelledby="tkt-ship" hidden>
-            <li><strong>Theos</strong><span>Builds the tweak, prefs bundle and CLI into a single package</span></li>
-            <li><strong>GitHub Actions</strong><span>Builds the .deb on a macOS runner on every push</span></li>
-            <li><strong>Releases</strong><span>Pushing a <code>v*</code> tag publishes a release with the .deb attached</span></li>
-            <li><strong>Debian packaging</strong><span>Rootless <code>iphoneos-arm64</code> package for Sileo, Zebra or Filza</span></li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <!-- ===================== Contact ===================== -->
-    <section id="contact" class="section">
-      <p class="eyebrow">Contact</p>
-      <article class="win contact">
-        <div class="win__title">
-          <span>Say hello</span>
-          <span class="win__close" aria-hidden="true">×</span>
-        </div>
-        <div class="win__body contact__body">
-          <p>
-            Found a bug in MicSelect, or have an idea for it? Open an issue on GitHub.
-            For anything else, you can find me there too.
-          </p>
-          <div class="row-actions">
-            <a class="btn btn--light" href="https://github.com/lemonde21/MicSelect/issues/new">Open an issue</a>
-            <a class="btn" href="https://github.com/lemonde21">github.com/lemonde21</a>
-          </div>
-        </div>
-      </article>
+      <div class="carousel__dots" role="group" aria-label="Choose a project"></div>
     </section>
   </main>
 
-  <!-- Taskbar -->
-  <footer class="taskbar">
-    <a class="taskbar__orb" href="#home" aria-label="Back to top">
-      <span class="orb orb--md" aria-hidden="true">l</span>
-    </a>
-    <a class="taskbar__app" href="https://github.com/lemonde21" aria-label="GitHub profile">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-    </a>
-    <a class="taskbar__app" href="https://github.com/lemonde21/MicSelect/releases/latest" aria-label="Download MicSelect">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3.5 3.5 0 0 0 3.5-3.5v-5a3.5 3.5 0 1 0-7 0v5A3.5 3.5 0 0 0 12 15Zm6-3.5a6 6 0 0 1-12 0H4.5a7.5 7.5 0 0 0 6.75 7.46V21h1.5v-2.04a7.5 7.5 0 0 0 6.75-7.46H18Z"/></svg>
-    </a>
-    <span class="taskbar__copy">© 2026 lemonde21</span>
-    <span class="taskbar__clock" aria-hidden="true"><span id="clock-time">--:--</span><span id="clock-date"></span></span>
+  <footer class="home__foot">
+    © 2026 lemonde21 · Interface inspired by the work of <a href="https://x.com/aidaknx">@aidaknx</a> on X.
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="home.js" defer></script>
 </body>
 </html>
